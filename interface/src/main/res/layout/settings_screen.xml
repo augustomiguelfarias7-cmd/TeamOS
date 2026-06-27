@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<screen name="settings_screen">
+    <topAppBar title="Configurações">
+        <button id="backToHomeButton" icon="back" action="returnHome" />
+    </topAppBar>
+
+    <settingsList>
+        <section id="about" title="Sobre o TeamOS" description="Versão, licença e informações do sistema." />
+        <section id="battery" title="Bateria" description="Uso de energia, porcentagem e economia de bateria." />
+        <section id="network" title="Rede e Wi-Fi" description="Wi-Fi, conexão, sinal e dados de rede." />
+        <section id="display" title="Tela" description="Brilho, tema, wallpaper e tamanho da interface." />
+        <section id="sound" title="Som" description="Volume, notificações e saída de áudio." />
+        <section id="privacy" title="Privacidade e segurança" description="Permissões, scanner e proteção do sistema." />
+        <section id="assistant" title="ChatGusto" description="Assistente, atalho do botão power e Modo Agente." />
+        <section id="system" title="Sistema" description="Atualizações, armazenamento, idioma e reinicialização." />
+    </settingsList>
+</screen>
