@@ -18,6 +18,7 @@ The settings screen opens from the home screen gear button:
 
 ```text
 Login e-mail -> greeting -> PIN creation -> Home screen -> top-right gear -> Settings
+Home screen -> top-right gear -> Settings
 ```
 
 ## Language direction

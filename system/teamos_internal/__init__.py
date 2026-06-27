@@ -17,6 +17,9 @@ __all__ = [
     "AgentSession",
     "NetworkManagerWifiService",
     "PinPolicy",
+    "AgentModeReview",
+    "AgentSession",
+    "NetworkManagerWifiService",
     "WifiError",
     "WifiNetwork",
 ]

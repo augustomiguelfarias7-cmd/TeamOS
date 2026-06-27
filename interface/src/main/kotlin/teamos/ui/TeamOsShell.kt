@@ -34,6 +34,9 @@ class TeamOsShell(
         navigator.open(Screen.Home)
     }
 
+    var currentScreen: Screen = Screen.Home
+        private set
+
     fun openSettings() {
         currentScreen = Screen.Settings
         navigator.open(Screen.Settings)
