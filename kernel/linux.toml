@@ -1,0 +1,10 @@
+[linux]
+name = "Linux kernel"
+repo = "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git"
+branch = "linux-6.12.y"
+source_dir = "external/linux"
+
+[teamos]
+config_fragment = "kernel/config/team_mobile.conf"
+patch_dir = "kernel/patches"
+primary_targets = ["qemu-aarch64", "generic-arm64-mobile"]

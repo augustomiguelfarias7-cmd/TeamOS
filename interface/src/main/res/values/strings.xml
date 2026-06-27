@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TeamOS</string>
+    <string name="home_slogan">pesquise quanto quiser</string>
+    <string name="search_hint">Pesquisar ou acessar</string>
+    <string name="settings_title">Configurações</string>
+    <string name="settings_gear_description">Abrir configurações</string>
+    <string name="recent_sites_title">Sites recentes</string>
+</resources>
