@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<screen name="login_email_screen">
+    <topArea>
+        <text id="loginTitle" value="Entrar no TeamOS" />
+        <text id="loginSubtitle" value="Use apenas seu e-mail para começar." />
+    </topArea>
+
+    <form id="emailLoginForm">
+        <input
+            id="emailInput"
+            type="email"
+            hint="Digite seu e-mail"
+            action="submitLoginEmail" />
+        <button
+            id="continueWithEmailButton"
+            label="Continuar"
+            action="submitLoginEmail" />
+    </form>
+</screen>

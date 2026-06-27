@@ -1,0 +1,44 @@
+[driver_set]
+name = "TeamOS mobile Linux driver set"
+target = "generic mobile Linux device"
+strategy = "import-linux-drivers"
+
+[[drivers]]
+id = "wifi"
+category = "network"
+linux_subsystems = ["cfg80211", "mac80211", "rfkill"]
+userland = ["NetworkManager", "nmcli"]
+teamos_service = "system.teamos_internal.wifi.NetworkManagerWifiService"
+status = "started"
+
+[[drivers]]
+id = "display"
+category = "graphics"
+linux_subsystems = ["DRM", "KMS", "backlight"]
+userland = ["Wayland compositor"]
+teamos_service = "planned"
+status = "planned"
+
+[[drivers]]
+id = "touch_input"
+category = "input"
+linux_subsystems = ["input", "evdev", "touchscreen"]
+userland = ["libinput"]
+teamos_service = "planned"
+status = "planned"
+
+[[drivers]]
+id = "audio"
+category = "sound"
+linux_subsystems = ["ALSA"]
+userland = ["PipeWire", "WirePlumber"]
+teamos_service = "planned"
+status = "planned"
+
+[[drivers]]
+id = "power"
+category = "battery"
+linux_subsystems = ["power_supply", "thermal"]
+userland = ["UPower"]
+teamos_service = "planned"
+status = "planned"

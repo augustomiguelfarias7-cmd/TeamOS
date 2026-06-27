@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<screen name="home_screen">
+    <statusBar time="12:45" network="WiFi" battery="86%" />
+
+    <button
+        id="settingsGearButton"
+        icon="gear"
+        contentDescription="Abrir configurações"
+        position="topEnd"
+        action="openSettings" />
+
+    <hero>
+        <text id="homeSlogan" value="pesquise quanto quiser" />
+        <searchBox
+            id="homeSearchBox"
+            hint="Pesquisar ou acessar"
+            action="submitSearch" />
+    </hero>
+
+    <recentSites title="Sites recentes">
+        <site title="YouTube" url="https://youtube.com" iconLabel="YT" />
+        <site title="ChatGusto" url="https://chatgusto-ai.genmb.com" iconLabel="GPT" />
+        <site title="GitHub" url="https://github.com" iconLabel="Git" />
+        <site title="Wiki" url="https://wikipedia.org" iconLabel="Wiki" />
+        <site title="Mail" url="https://mail.google.com" iconLabel="Mail" />
+        <site title="Pull" url="https://pull-search.genmb.com" iconLabel="Pull" />
+    </recentSites>
+
+    <navigationBar>
+        <button id="backButton" icon="back" action="goBack" />
+        <button id="homeButton" icon="home" action="returnHome" />
+        <button id="tabsButton" icon="tabs" action="openTabs" />
+        <button id="menuButton" icon="menu" action="openMenu" />
+    </navigationBar>
+</screen>
