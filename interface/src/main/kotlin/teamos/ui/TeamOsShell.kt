@@ -10,6 +10,30 @@ package teamos.ui
 class TeamOsShell(
     private val navigator: Navigator,
 ) {
+    var currentScreen: Screen = Screen.LoginEmail
+        private set
+
+
+    fun submitLoginEmail(email: String): LoginProfile {
+        val profile = LoginProfile(
+            email = email.trim().lowercase(),
+            displayName = displayNameFromEmail(email),
+        )
+        currentScreen = Screen.LoginGreeting
+        navigator.open(Screen.LoginGreeting)
+        return profile
+    }
+
+    fun continueToPinCreation() {
+        currentScreen = Screen.PinCreation
+        navigator.open(Screen.PinCreation)
+    }
+
+    fun finishPinCreation() {
+        currentScreen = Screen.Home
+        navigator.open(Screen.Home)
+    }
+
     var currentScreen: Screen = Screen.Home
         private set
 
@@ -35,6 +59,23 @@ class TeamOsShell(
         return target
     }
 
+
+    private fun displayNameFromEmail(email: String): String {
+        val localPart = email.substringBefore('@').trim()
+        if (localPart.isEmpty()) {
+            return "usuário"
+        }
+        return localPart
+            .replace('.', ' ')
+            .replace('_', ' ')
+            .replace('-', ' ')
+            .split(' ')
+            .filter { it.isNotBlank() }
+            .joinToString(" ") { word ->
+                word.replaceFirstChar { char -> char.uppercase() }
+            }
+    }
+
     private fun looksLikeUrl(value: String): Boolean {
         return value.startsWith("https://") ||
             value.startsWith("http://") ||
@@ -55,6 +96,9 @@ interface Navigator {
 }
 
 sealed class Screen {
+    object LoginEmail : Screen()
+    object LoginGreeting : Screen()
+    object PinCreation : Screen()
     object Home : Screen()
     object Settings : Screen()
 }
@@ -63,6 +107,11 @@ sealed class BrowserTarget {
     data class DirectUrl(val url: String) : BrowserTarget()
     data class PullSearch(val query: String) : BrowserTarget()
 }
+
+data class LoginProfile(
+    val email: String,
+    val displayName: String,
+)
 
 data class HomeShortcut(
     val title: String,
@@ -80,6 +129,8 @@ object TeamOsDefaults {
     const val slogan = "pesquise quanto quiser"
     const val searchHint = "Pesquisar ou acessar"
     const val pullSearchTemplate = "https://pull-search.genmb.com/?q=%s#"
+    const val emailHint = "Digite seu e-mail"
+    const val pinHint = "Crie um PIN"
 
     val recentSites = listOf(
         HomeShortcut("YouTube", "https://youtube.com", "YT"),

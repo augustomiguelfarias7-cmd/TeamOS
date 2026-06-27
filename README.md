@@ -18,6 +18,16 @@ Core principles:
 - **ChatGusto assistant**: ChatGusto is the official assistant, planned to open quickly from the power-button triple press.
 - **TeamOS Agent Mode**: ChatGusto may request controlled system-agent permissions through TeamOS security prompts, scanner checks, and user approval.
 
+## Login flow
+
+The first TeamOS account flow is intentionally simple:
+
+```text
+e-mail -> hello by e-mail name -> create local PIN -> home
+```
+
+The user enters an e-mail address, TeamOS greets the user by a display name derived from that e-mail, then the user creates a numeric local PIN before reaching the home screen.
+
 ## Planned home screen
 
 ```text
@@ -66,6 +76,9 @@ interface/
 └── src/main/
     ├── kotlin/teamos/ui/TeamOsShell.kt
     └── res/
+        ├── layout/login_email_screen.xml
+        ├── layout/login_greeting_screen.xml
+        ├── layout/pin_creation_screen.xml
         ├── layout/home_screen.xml
         ├── layout/settings_screen.xml
         └── values/strings.xml
@@ -101,6 +114,7 @@ system/
 ├── README.md
 └── teamos_internal/
     ├── agent_mode.py
+    ├── login.py
     ├── models.py
     └── wifi.py
 ```

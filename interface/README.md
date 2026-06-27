@@ -6,6 +6,9 @@ The first target is not a full Android app or a complete Linux mobile shell yet.
 
 ## Initial screens
 
+- **Login e-mail screen**: first-run entry point that asks only for the user e-mail.
+- **Greeting screen**: says hello using the display name derived from the e-mail.
+- **PIN creation screen**: asks the user to create a local numeric PIN before opening TeamOS.
 - **Home screen**: search-first launcher with recent sites and a settings gear in the top-right corner.
 - **Settings screen**: normal operating-system settings area with sections for about, battery, network, display, sound, privacy, assistant, and system.
 
@@ -14,6 +17,7 @@ The first target is not a full Android app or a complete Linux mobile shell yet.
 The settings screen opens from the home screen gear button:
 
 ```text
+Login e-mail -> greeting -> PIN creation -> Home screen -> top-right gear -> Settings
 Home screen -> top-right gear -> Settings
 ```
 

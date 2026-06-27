@@ -6,4 +6,13 @@
     <string name="settings_title">Configurações</string>
     <string name="settings_gear_description">Abrir configurações</string>
     <string name="recent_sites_title">Sites recentes</string>
+    <string name="login_title">Entrar no TeamOS</string>
+    <string name="login_subtitle">Use apenas seu e-mail para começar.</string>
+    <string name="email_hint">Digite seu e-mail</string>
+    <string name="continue_label">Continuar</string>
+    <string name="hello_title">Olá, {displayName}</string>
+    <string name="hello_subtitle">Agora vamos proteger o TeamOS com um PIN local.</string>
+    <string name="pin_title">Crie um PIN</string>
+    <string name="pin_subtitle">Esse PIN desbloqueia o TeamOS neste dispositivo.</string>
+    <string name="finish_pin_label">Entrar no TeamOS</string>
 </resources>

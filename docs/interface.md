@@ -10,6 +10,21 @@ TeamOS will use a mobile interface inspired by Android's interaction model while
 - Use a top-right gear button on the home screen to open settings.
 - Keep the internal system based on Linux while writing the interface in Android-style languages and structure.
 
+## Login and account creation flow
+
+TeamOS starts with a simple first-run account flow:
+
+```text
+E-mail screen -> greeting by e-mail name -> create local PIN -> home screen
+```
+
+Rules:
+
+- The first screen asks only for an e-mail address.
+- After the e-mail is submitted, TeamOS derives a friendly display name from the part before `@` and shows `Olá, {displayName}`.
+- The user must create a numeric local PIN before reaching the home screen.
+- The PIN protects the device locally; the e-mail step is the identity step, not a password login.
+
 ## Home screen structure
 
 ```text
@@ -59,6 +74,9 @@ interface/
 │   └── TeamOsShell.kt
 └── src/main/res/
     ├── layout/
+    │   ├── login_email_screen.xml
+    │   ├── login_greeting_screen.xml
+    │   ├── pin_creation_screen.xml
     │   ├── home_screen.xml
     │   └── settings_screen.xml
     └── values/
